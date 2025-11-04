@@ -1,7 +1,7 @@
 import importlib.util, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location("main", ROOT / "weather_window.py")
+SPEC = importlib.util.spec_from_file_location("main", ROOT / "src" / "weather_window.py")
 main = importlib.util.module_from_spec(SPEC); SPEC.loader.exec_module(main)
 sliding_window_max = main.sliding_window_max
 
